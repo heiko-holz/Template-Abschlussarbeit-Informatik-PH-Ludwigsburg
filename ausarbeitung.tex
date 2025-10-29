@@ -1,4 +1,4 @@
-\documentclass[twoside,12pt,a4paper]{scrreprt} % ändern auf oneside für PDF-Abgabe
+\documentclass[oneside,12pt,a4paper]{scrreprt} % ändern auf twoside für Druck-Abgabe
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -7,14 +7,15 @@
 %% Alternative, APA 7 Citation Style
 %%   Dann `babelbib` oben auskommentieren
 %%   und weiter unten beim Literaturverzeichnis auch noch ein-/auskommentieren
-%%\usepackage[
-%%  style=apa,
-%%  backend=biber,
-%%  sortcites=true,
-%%  natbib=true,
-%%  uniquename=false
-%%]{biblatex}
-%%\addbibresource{literatur.bib}  % deine Bib-Datei
+%% Bitte beachte, dass mit natbib für die Zitation wie Holz (2025) der Befehl \citep verwendet werden muss, siehe auch https://www.overleaf.com/learn/latex/Natbib_citation_styles
+% \usepackage[
+%  style=apa,
+%  backend=biber,
+%  sortcites=true,
+%  natbib=true,
+%  uniquename=false
+% ]{biblatex}
+% \addbibresource{literatur.bib}  % deine Bib-Datei
 \usepackage{parskip}
 \usepackage{microtype}
 \usepackage{graphicx} % Zum Einbinden von Grafiken
@@ -24,7 +25,7 @@
 \usepackage{pgfplots} \pgfplotsset{compat=1.9}
 \usepackage{helvet} % Schönere SansSerif-Schrift
 \usepackage{times}  % Schönere Serif-Schrift
-
+\usepackage{enumitem}
 \usepackage{blindtext} % sollte am Ende nicht mehr benötigt werden ;)
 
 \usepackage{amsmath}
@@ -143,18 +144,74 @@ Bearbeitungszeitraum: Anfangs- -- Enddatum
 \bibliography{literatur}
 %% Alternative, APA 7 Citation Style
 %%   Dann obige beide Zeilen auskommentieren
-%%\printbibliography
+%\printbibliography
 
 \cleardoublepage
 
 %%% Selbständigkeitserklärung
 \thispagestyle{empty}
 \section*{Erklärung}
-Hiermit erkläre ich, dass ich diese schriftliche Abschlussarbeit selbständig 
-verfasst habe, keine anderen als die angegebenen Hilfsmittel und Quellen benutzt 
-habe und alle wörtlich oder sinngemäß aus anderen Werken übernommenen Aussagen als 
-solche gekennzeichnet habe.
-\\[2cm]
-Ort, Datum \hfil Unterschrift 
+An dieser Stelle ist die gültige Fassung der \href{https://media.ph-ludwigsburg.de/downloadzentrum/objekte/1410173-Eigenstndigkeitserklrung-fr-schriftliche-Prfungen
+}{Eigenständigkeitserklärung für schriftliche Prüfungen} der Pädagogischen Hochschule Ludwigsburg einzubinden.
+\hrule
+
+\noindent
+
+%\vspace{1cm}
+
+\noindent
+Name, Vorname:
+
+\noindent
+Matrikelnummer: 
+\vspace{0.1cm}
+\hrule
+\vspace{0.5cm}
+
+\noindent
+\begin{itemize}[label=$\square$, leftmargin=*, nosep]
+    \item Bachelorarbeit
+    \item Masterarbeit
+    \item schriftlichen Modulprüfung (Hausarbeit, Portfolio, etc.)
+    \item meinen Anteil der Gruppenarbeit als schriftliche Modulprüfung\\
+    (der persönliche Teil muss gekennzeichnet sein)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\noindent
+Hiermit versichere ich, dass ich die vorliegende Arbeit mit dem Titel:
+
+\vspace{0.5cm}
+
+\noindent
+\hrule
+\noindent
+selbstständig und ohne unzulässige fremde Hilfe oder Hilfsmittel verfasst habe.
+
+\noindent
+Ich habe keine anderen als die angegebenen Quellen und Hilfsmittel benutzt.
+
+\noindent
+Alle verwendeten Quellen und sämtliche Literatur habe ich vollständig im Quellen- bzw. Literaturverzeichnis aufgeführt. Ich habe alle wörtlichen Zitate und sinngemäßen Verweise gekennzeichnet.
+
+\noindent
+Ich habe alle Hilfsmittel aufgeführt, die ich genutzt habe (hierzu zählen auch generative KI oder Dialogsysteme). [Hilfsmittel sind im Anschluss an das Quellen- bzw. Literaturverzeichnis aufzuführen.]
+
+\noindent
+Diese Versicherung gilt für sämtliche Bestandteile meiner Arbeit.
+
+\noindent
+Meine Qualifikationsarbeit hat in gleicher oder ähnlicher Form noch keiner Prüfungsbehörde an dieser oder einer anderen Hochschule vorgelegen. Ebenfalls erkläre ich, dass ich noch keine Abschlussprüfung in einem gleichen oder vergleichbaren Studiengang endgültig nicht bestanden habe und mich nicht in einem laufenden Prüfungsverfahren in einem gleichen oder vergleichbaren Studiengang befinde.
+
+\vspace{2cm}
+
+\noindent
+\begin{tabular}{@{}p{5cm}p{5cm}@{}}
+\hrulefill & \hrulefill \\
+Ort, Datum & Unterschrift
+\end{tabular}
+\vfill
+Bearbeitungsstand 01.04.2024
 
 \end{document}
