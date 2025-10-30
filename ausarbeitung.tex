@@ -25,6 +25,7 @@
 \usepackage{pgfplots} \pgfplotsset{compat=1.9}
 \usepackage{helvet} % Schönere SansSerif-Schrift
 \usepackage{times}  % Schönere Serif-Schrift
+\usepackage{listings} % für Code-Darstellung
 \usepackage{enumitem}
 \usepackage{blindtext} % sollte am Ende nicht mehr benötigt werden ;)
 
@@ -45,6 +46,22 @@ pdftitle={Titel der Arbeit},
 pdfauthor={Vor- und Nachname},
 pdfsubject={Bachelorarbeit Informatik},
 pdfpagelayout=TwoColumnRight
+}
+
+% Style für Inline Latex Code
+\lstdefinestyle{latexinline}{
+    language=[LaTeX]TeX,        % LaTeX-Syntax
+    basicstyle=\ttfamily,       % Monospace
+    keywordstyle=\color{blue!50!black}, % LaTeX-Befehle blau
+    commentstyle=\color{green!50!black}, % Kommentare grün
+    stringstyle=\color{orange}, % Strings orange
+    breaklines=true,            % Zeilenumbruch bei langen Befehlen
+    breakatwhitespace=false,    % auch mitten in Wörtern umbrechen
+    showstringspaces=false,
+    literate=
+    *{\{}{{\color{blue}\{}}1
+    {\}}{{\color{blue}\}}}1,
+    morekeywords={printbibliography,addbibresource}
 }
 
 %%% Eigene Makros
